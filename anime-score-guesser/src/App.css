@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.VideoPlayer{
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+}
+.AppHeader{
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+}
