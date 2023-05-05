@@ -1,10 +1,11 @@
 export default async function getAnime() {
+  let apiKey = process.env.REACT_APP_RAPID_API_KEY;
   let rank = getRandomNumber(1, 3000);
   const url = `https://anime-db.p.rapidapi.com/anime/by-ranking/${rank}`;
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "a249bc73e8msh486e0da45b2071ap1b0467jsnc816e9d01273",
+      "X-RapidAPI-Key": apiKey,
       "X-RapidAPI-Host": "anime-db.p.rapidapi.com",
     },
   };

@@ -5,13 +5,12 @@ import getAnime from "./GetRandomAnime.js";
 export default async function getClip() {
   let data = await getAnime();
   let animeId = JSON.parse(data);
-  console.log(animeId._id);
   data = await getAnimeStats(animeId._id);
   let animeData = JSON.parse(data);
   const anime = {
     name: animeData.data.title,
     score: animeData.data.score,
-    rank: animeData.data.rank,
+    rank: animeData.data.popularity,
     videoId: "",
   };
   let searchTerm = anime.name + " clip";

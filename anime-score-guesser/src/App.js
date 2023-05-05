@@ -81,7 +81,7 @@ function App() {
             onValueChange={handlePopularityChange}
             value={popularity}
             min={"1"}
-            max={"20000"}
+            max={"3000"}
             step={1.0}
           />
           <div>
