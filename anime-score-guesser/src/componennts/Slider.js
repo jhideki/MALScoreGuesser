@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "../styles/Slider.css";
 
 function Slider(props) {
-  const [value, setValue] = useState(5);
-
   const handleSliderChange = (event) => {
-    setValue(event.target.value);
+    const newValue = event.target.value;
+    props.onValueChange(newValue);
   };
 
   return (
@@ -14,13 +13,13 @@ function Slider(props) {
         type="range"
         min={props.min}
         max={props.max}
-        value={value}
+        value={props.value}
         step={props.step}
         onChange={handleSliderChange}
         className="Slider"
       />
       <p>
-        {props.name} : {value}
+        {props.name} : {props.value}
       </p>
     </div>
   );

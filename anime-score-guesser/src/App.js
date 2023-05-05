@@ -1,6 +1,6 @@
 import "./App.css";
 import ReactPlayer from "react-player/youtube";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import getClip from "./utils/GetClip";
 import throttle from "lodash.throttle";
 import Slider from "./componennts/Slider";
@@ -13,13 +13,23 @@ function App() {
   const [popularity, setPopularity] = useState(0);
   const [rating, setRating] = useState(5);
   const [showModal, setShowModal] = useState(false);
+  const [playVideo, setPlayVideo] = useState(true);
 
   function handleOpenModal() {
+    pauseVideo();
     setShowModal(true);
   }
 
-  function handleCloseModal() {
+  function handleReset() {
     setShowModal(false);
+    setRating(5);
+    setPopularity(1);
+    setFirstAnime();
+    setPlayVideo(true);
+  }
+
+  function pauseVideo() {
+    setPlayVideo(false);
   }
 
   async function setFirstAnime() {
@@ -52,28 +62,38 @@ function App() {
   return (
     <div className="App">
       <div className="GameContainer">
-        <header className="App-header">Anime MAL Score Guesser</header>
+        <h1 className="App-header">Anime MAL Score Guesser</h1>
+        <h3>Current Anime: {anime.name}</h3>
         <div className="VideoPlayer">
-          {anime && <ReactPlayer url={url} playing={true} />}
+          {anime && <ReactPlayer url={url} playing={playVideo} />}
         </div>
         <div className="UserInput">
           <Slider
             name={"MAL score"}
-            onChange={handleRatingChange}
+            onValueChange={handleRatingChange}
+            value={rating}
             min={"1"}
             max={"10"}
             step={0.01}
           />
           <Slider
             name={"Popularity Ranking"}
-            onChange={handlePopularityChange}
+            onValueChange={handlePopularityChange}
+            value={popularity}
             min={"1"}
             max={"20000"}
             step={1.0}
           />
           <div>
-            <button onClick={handleOpenModal}>Open Modal</button>
-            {showModal && <PopupModal handleClose={handleCloseModal} />}
+            <button onClick={handleOpenModal}>Submit Guess!</button>
+            {showModal && (
+              <PopupModal
+                handleClose={handleReset}
+                rating={rating}
+                popularity={popularity}
+                anime={anime}
+              />
+            )}
           </div>
         </div>
       </div>
