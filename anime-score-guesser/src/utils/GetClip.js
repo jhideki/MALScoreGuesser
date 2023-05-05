@@ -10,7 +10,7 @@ export default async function getClip() {
     rank: animeData.data.rank,
     videoId: "",
   };
-  let searchTerm = anime.name;
+  let searchTerm = anime.name + " clip";
   let videos = await findVideos(searchTerm);
   anime.videoId = getVideo(videos, searchTerm);
   return anime;

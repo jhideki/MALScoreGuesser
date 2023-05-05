@@ -63,7 +63,7 @@ function App() {
     <div className="App">
       <div className="GameContainer">
         <h1 className="App-header">Anime MAL Score Guesser</h1>
-        <h3>Current Anime: {anime.name}</h3>
+        {anime && <h3>Current Anime: {anime.name}</h3>}
         <div className="VideoPlayer">
           {anime && <ReactPlayer url={url} playing={playVideo} />}
         </div>
