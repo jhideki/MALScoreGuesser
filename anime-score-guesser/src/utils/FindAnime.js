@@ -1,5 +1,5 @@
-export default async function getAnime() {
-  const url = `https://api.jikan.moe/v4/random/anime`;
+export default async function getAnimeStats(id) {
+  const url = `https://api.jikan.moe/v4/anime/${id}`;
   const options = {
     method: "GET",
   };

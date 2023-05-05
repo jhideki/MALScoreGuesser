@@ -1,8 +1,12 @@
 import findVideos from "./FindVideos.js";
-import getAnime from "./FindAnime.js";
+import getAnimeStats from "./FindAnime.js";
+import getAnime from "./GetRandomAnime.js";
 
 export default async function getClip() {
   let data = await getAnime();
+  let animeId = JSON.parse(data);
+  console.log(animeId._id);
+  data = await getAnimeStats(animeId._id);
   let animeData = JSON.parse(data);
   const anime = {
     name: animeData.data.title,
