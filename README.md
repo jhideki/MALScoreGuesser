@@ -1,7 +1,7 @@
 # MAL score guesser
 
 React javascript project where users guess an anime's MAL score and popularity ranking based off a youtube video of that anime. <br>
-Current site is up at: [MAL score guesser](mal-score-guesser-32yf8z55g-jonathan-ami.vercel.app) <br>
+Current site is up at: [MAL score guesser]([mal-score-guesser-32yf8z55g-jonathan-ami.vercel.app](https://mal-score-guesser.vercel.app/)) <br>
 The site is limited to a certain number of API calls so it might be down at the time of running.
 
 ## APIs
