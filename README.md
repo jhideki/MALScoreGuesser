@@ -14,11 +14,11 @@ Experience the MAL Score Guesser in action: [Live Demo](https://mal-score-guesse
 
 ## Environment Setup
 
-To run this project locally, you need to set up the environment variables. Create a `.env` file in the root of the project and include the following keys:
+To run this project locally, you need to set up the environment variables. Create a `.env` file in the root of the project and include the following keys: <br>
 
-REACT_APP_YOUTUBE_API_KEY=your_youtube_api_key
-REACT_APP_ANIME_DB_API_KEY=your_anime_db_api_key
-REACT_APP_JIKAN_API_KEY=your_jikan_api_key
+REACT_APP_YOUTUBE_API_KEY=your_youtube_api_key <br>
+REACT_APP_ANIME_DB_API_KEY=your_anime_db_api_key <br>
+REACT_APP_JIKAN_API_KEY=your_jikan_api_key <br>
 
 Replace `your_youtube_api_key`, `your_anime_db_api_key`, and `your_jikan_api_key` with your actual API keys.
 
