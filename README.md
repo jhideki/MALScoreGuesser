@@ -4,7 +4,7 @@ MAL Score Guesser is an interactive web application where users can guess the My
 
 ## Live Demo
 
-Experience the MAL Score Guesser in action: [Live Demo](https://mal-score-guesser.vercel.app/)
+Experience the MAL Score Guesser in action: [Live Demo](https://mal-score-guesser.vercel.app/) (video may a moement to load)
 
 ## APIs Used
 
