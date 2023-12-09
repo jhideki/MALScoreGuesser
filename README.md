@@ -45,10 +45,4 @@ Future enhancements planned for the project include:
 - Implementing a clip feature in the react-player to play only a portion of the video.
 - Developing a more sophisticated scoring system with enhanced visual feedback.
 
-## Contributing
 
-Contributions to the MAL Score Guesser are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
